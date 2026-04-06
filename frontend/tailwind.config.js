@@ -20,28 +20,28 @@ export default {
           900: '#09090b', // Deep black for darkest text
         },
         primary: {
-          50: '#f4f4f5',
-          100: '#e4e4e7',
-          200: '#d4d4d8',
-          300: '#a1a1aa',
-          400: '#71717a',
-          500: '#27272a', // Button background (shade of black)
-          600: '#18181b', // Button hover (deep black)
-          700: '#09090b',
-          800: '#000000',
-          900: '#000000',
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#62B3EA', // Button background
+          600: '#62B3EA', // Standard button background
+          700: '#4ca1d9', // Hover state
+          800: '#075985',
+          900: '#0c4a6e',
         },
         indigo: {
-          50: '#f4f4f5',
-          100: '#e4e4e7',
-          200: '#d4d4d8',
-          300: '#a1a1aa',
-          400: '#71717a',
-          500: '#27272a', // Secondary buttons
-          600: '#18181b', 
-          700: '#09090b',
-          800: '#000000',
-          900: '#000000',
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#62B3EA', // Button background
+          600: '#62B3EA', // Standard button background
+          700: '#4ca1d9', // Hover state
+          800: '#075985',
+          900: '#0c4a6e',
         }
       },
       animation: {
