@@ -1,11 +1,13 @@
 import { useContext, useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { Stethoscope, LogOut, User } from 'lucide-react';
 
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+    const isLandingPage = location.pathname === '/';
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -33,7 +35,7 @@ const Navbar = () => {
                     </span>
                 </Link>
                 <div className="flex items-center gap-4">
-                    {user ? (
+                    {user && !isLandingPage ? (
                         <div className="flex items-center gap-6">
                             <span className="text-sm font-medium text-slate-600 hidden sm:flex items-center gap-2 bg-slate-100 px-3 py-1.5 rounded-full capitalize">
                                 <User w={16} h={16} className="shrink-0" />
