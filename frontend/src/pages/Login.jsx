@@ -39,7 +39,7 @@ const Login = () => {
     };
 
     return (
-        <div className="flex-1 flex justify-center items-center py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1 flex justify-center items-center">
             <div className="w-full max-w-md animate-fade-in glass-card rounded-2xl p-8 relative overflow-hidden">
                 {/* Decorative corner */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary-500/10 rounded-bl-[100px] pointer-events-none"></div>

@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-import { Stethoscope, LogOut, User } from 'lucide-react';
+import { Stethoscope, LogOut, User, Activity } from 'lucide-react';
 
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext);
@@ -56,7 +56,16 @@ const Navbar = () => {
                             </button>
                         </div>
                     ) : (
-                        <div className="flex gap-3">
+                        <div className="flex gap-3 items-center">
+                            {isLandingPage && (
+                                <button
+                                    onClick={() => document.getElementById('symptom-checker')?.scrollIntoView({ behavior: 'smooth' })}
+                                    className="px-5 py-2 text-sm font-semibold text-primary-600 hover:text-primary-700 bg-primary-50 hover:bg-primary-100 rounded-xl transition-all flex items-center gap-2 mr-2"
+                                >
+                                    <Activity className="w-4 h-4" />
+                                    Ask AI
+                                </button>
+                            )}
                             <Link to="/login" className="px-5 py-2 text-sm font-semibold text-slate-700 hover:text-primary-600 transition-colors">
                                 Log in
                             </Link>
