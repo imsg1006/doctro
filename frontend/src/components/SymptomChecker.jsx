@@ -31,6 +31,11 @@ const symptomData = {
     causes: ["Viral infection", "Streptococcus", "Allergies"],
     advice: "Gargle with warm salt water. Drink warm fluids. Rest your voice.",
     risk: "Low"
+  },
+  "pain": {
+    cause: ["Excessive load", "Irregular Sleep Position"],
+    advice: ["Rest the area and avoid movement that worsen it"],
+    risk: "Low"
   }
 };
 
@@ -41,7 +46,7 @@ const SymptomChecker = () => {
 
   const analyzeSymptoms = () => {
     if (!input.trim()) return;
-    
+
     setLoading(true);
     // Simulate AI processing
     setTimeout(() => {
@@ -82,7 +87,7 @@ const SymptomChecker = () => {
     <section id="symptom-checker" className="w-full max-w-4xl mx-auto my-16 p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-xl relative overflow-hidden">
       {/* Decorative background element */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary-500/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-      
+
       <div className="relative z-10">
         <div className="flex items-center gap-3 mb-6">
           <div className="p-3 bg-primary-100 rounded-2xl text-primary-600">
@@ -119,7 +124,7 @@ const SymptomChecker = () => {
                 <>Analyze Symptoms <ArrowRight className="w-5 h-5" /></>
               )}
             </button>
-            
+
             <div className="flex items-start gap-2 p-4 rounded-xl bg-slate-50 border border-slate-100">
               <Info className="w-5 h-5 text-slate-400 mt-0.5 shrink-0" />
               <p className="text-xs text-slate-500 leading-relaxed">
