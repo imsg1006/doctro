@@ -33,8 +33,8 @@ const symptomData = {
     risk: "Low"
   },
   "pain": {
-    cause: ["Excessive load", "Irregular Sleep Position"],
-    advice: ["Rest the area and avoid movement that worsen it"],
+    causes: ["Excessive load", "Irregular Sleep Position"],
+    advice: "Rest the area and avoid movement that worsen it",
     risk: "Low"
   }
 };

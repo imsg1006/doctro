@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
         if (token) {
             try {
                 const decoded = jwtDecode(token);
-                setUser({ id: decoded.user_id, role: decoded.role, token });
+                setUser({ id: decoded.user_id, role: decoded.role, name: decoded.name, specialization: decoded.specialization, token });
             } catch (error) {
                 console.error("Invalid token", error);
                 localStorage.removeItem('token');
@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
     const login = (token) => {
         localStorage.setItem('token', token);
         const decoded = jwtDecode(token);
-        setUser({ id: decoded.user_id, role: decoded.role, token });
+        setUser({ id: decoded.user_id, role: decoded.role, name: decoded.name, specialization: decoded.specialization, token });
     };
 
     const logout = () => {

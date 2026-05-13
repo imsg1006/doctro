@@ -40,7 +40,9 @@ const Navbar = () => {
                             <span className="text-sm font-medium text-slate-600 hidden sm:flex items-center gap-2 bg-slate-100 px-3 py-1.5 rounded-full capitalize">
                                 <User w={16} h={16} className="shrink-0" />
                                 <span className="flex flex-col items-start leading-tight">
-                                    <span className="font-bold">{user.name || user.role}</span>
+                                    <span className="font-bold">
+                                        {user.name ? (user.role === 'doctor' ? `Dr. ${user.name}` : user.name) : user.role}
+                                    </span>
                                     {user.role === 'doctor' && user.specialization && (
                                         <span className="text-[10px] text-slate-500 font-normal uppercase tracking-wide">{user.specialization}</span>
                                     )}
